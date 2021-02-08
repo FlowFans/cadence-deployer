@@ -1,50 +1,98 @@
-# cadence-deployer
+# Cadence 合约部署
 
-单独部署 Cadence 合约至 Flow 测试网
 
+- ts 
+
+Cadence 合约部署的一种方式, [详见](./ts/README.md)
+
+- js 
+
+Cadence 合约部署的一种方式，[详见](./js/README.md)
+
+
+# Flow 核心合约
+
+Flow 依赖于一组核心合约，这些合约定义了Flow协议的关键部分。
+
+这些合同控制以下内容：
+
+- 标准同质化代币（对标以太坊 ERC-20）
+
+- 非同质化代币
+
+- 默认代币（FlowToken）
+
+- 支付账户，交易和仓储费
+
+- 质押和委派（FlowIDTableStaking）
+
+- 代币锁仓（LockedTokens）
+
+
+
+
+## 标准同质化代币
+
+- [FungibleToken.cdc 源码](https://github.com/onflow/flow-ft/blob/master/contracts/FungibleToken.cdc)
+
+
+- Emulator	`0xee82856bf20e2aa6`
+- Testnet	`0x9a0766d93b6608b7`
+- Mainnet	`0xf233dcee88fe0abe`
+
+
+## 非同质化代币
+
+- [NonFungibleToken.cdc 源码](https://github.com/onflow/flow-nft/blob/master/contracts/NonFungibleToken.cdc)
+
+
+- Testnet	`0x631e88ae7f1d7c20`
+- Mainnet	`0x1d7e57aa55817448`
+
+
+
+## 默认代币（FlowToken）
+
+- [FlowToken.cdc 源码](https://github.com/onflow/flow-core-contracts/blob/master/contracts/FlowToken.cdc)
+
+
+- Emulator	`0x0ae53cb6e3f42a79`
+- Testnet	`0x7e60df042a9c0868`
+- Mainnet	`0x1654653399040a61`
+- FT.01	交易Flow    [flowToken/transfer_tokens.cdc](https://github.com/onflow/flow-core-contracts/blob/master/transactions/flowToken/transfer_tokens.cdc)
+- FT.02	查询余额	[flowToken/scripts/get_balance.cdc](https://github.com/onflow/flow-core-contracts/blob/master/transactions/flowToken/scripts/get_balance.cdc)
+- FT.03	查询总量	[flowToken/scripts/get_supply.cdc](https://github.com/onflow/flow-core-contracts/blob/master/transactions/flowToken/scripts/get_supply.cdc)
  
 
-## 安装依赖
+## 支付账户，交易和仓储费 FlowFees 
 
-```shell
-yarn
-```
-
-## 修改配置
-
-按照`.env.example`的格式创建一个 `.env`文件（该文件数据不要公开上传），里面的`ACCOUNT_ADDRESS` 和 `ACCOUNT_PRIVATE_KEY` 分别是合约想要部署的账户地址和账户的私钥。
-
-- [如何获得测试网账户](https://docs.onflow.org/dapp-deployment/testnet-deployment/)
-
-- [测试网地址及代币申请](https://testnet-faucet.onflow.org/)
-
-  
-## 运行启动
-
-```shell
-yarn start:dev
-```
-
-- 正常运行结束后，合约应该会被成功部署到对应的区块链网络上
-
-```shell
-starting deployment of contracts, accessNode: https://access-testnet.onflow.org  address: 64ce437a3838c89d
-deploying...
-deploying helloworld contract...
-add contract name: HelloWorld
-deployed helloworld contract
-result {
-  helloworld: { status: 4, statusCode: 0, errorMessage: '', events: [ [Object] ] }
-}
-https://flow-view-source.com/testnet/account/0x64ce437a3838c89d
-Done in 30.48s.
-```
+- [FlowFees.cdc 源码](https://github.com/onflow/flow-core-contracts/blob/master/contracts/FlowFees.cdc)
 
 
-## 查看合约
-
-- 你可以通过如下网址查看合约部署情况 [live demo of HelloWorld ](https://flow-view-source.com/testnet/account/0x64ce437a3838c89d)：
-
-`https://flow-view-source.com/testnet/account/ACCOUNT_ADDRESS`. 
+- Testnet	`0x912d5440f7e3769e`
+- Mainnet	`0xf919ee77447b7497`
 
 
+## 质押和委派（FlowIDTableStaking）
+
+- [FlowIDTableStaking.cdc 源码](https://github.com/onflow/flow-core-contracts/blob/master/contracts/FlowIDTableStaking.cdc)
+
+
+- Testnet	`0x9eca2b38b18b5dfe`
+- Mainnet	`0x8624b52f9ddcd04a`
+
+
+## 代币锁仓（LockedTokens）
+
+- [LockedTokens.cdc 源码](https://github.com/onflow/flow-core-contracts/blob/master/contracts/LockedTokens.cdc)
+
+
+- Testnet	`0x95e019a17d0e23d7`
+- Mainnet	`0x8d0e87b65159ae63`
+
+
+- [StakingProxy.cdc 源码](https://github.com/onflow/flow-core-contracts/blob/master/contracts/StakingProxy.cdc)
+
+
+- Testnet	`0x7aad92e5a0715d21`
+- Mainnet	`0x62430cf28c26d095`
