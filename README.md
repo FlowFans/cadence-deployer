@@ -1,13 +1,56 @@
-# Cadence 合约部署
+# Flow 网络
+
+Flow 的网络节点配置信息，可用于 SDK 和客户端
+
+- Testnet: `access.devnet.nodes.onflow.org:9000`
+
+- Mainnet: `access.mainnet.nodes.onflow.org:9000`
+
+---
+
+区块链浏览器：
+
+- [Flowscan  (主网)](https://flowscan.org/): `https://flowscan.org/`
+
+- [Flow-bigdipper](https://flow.bigdipper.live/): `https://flowscan.org/`
+
+---
+
+查看合约：
+
+- Mainnet
+```
+https://flow-view-source.com/mainnet/account/0x1654653399040a61
+```
+`0x1654653399040a61` 换成自己的主网地址
+ 
+
+- Testnet
+```
+https://flow-view-source.com/testnet/account/0x64ce437a3838c89d
+```
+`0x64ce437a3838c89d` 换成自己的测试网地址
+
+
+
+# Cadence 合约部署示例
 
 
 - ts 
 
-Cadence 合约部署的一种方式, [详见](./ts/README.md)
+Cadence 合约部署的一种方式, [详细内容](./ts/README.md)
 
 - js 
 
-Cadence 合约部署的一种方式，[详见](./js/README.md)
+Cadence 合约部署的一种方式，[详细内容](./js/README.md)
+
+- go
+
+Cadence 合约部署的一种方式，[详细内容](./go/README.md)
+
+
+
+
 
 
 # Flow 核心合约
