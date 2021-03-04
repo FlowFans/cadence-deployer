@@ -1,4 +1,15 @@
-# Flow 网络
+# Cadence 合约部署示例
+
+
+- Cadence 合约 `ts` 部署的一种方式, [详细内容](./ts/README.md)
+
+- Cadence 合约 `js` 部署的一种方式，[详细内容](./js/README.md)
+
+- Cadence 合约 `go` 部署的一种方式，[详细内容](./go/README.md)
+
+
+
+# Flow 区块链信息
 
 Flow 的网络节点配置信息，可用于 SDK 和客户端
 
@@ -32,26 +43,7 @@ https://flow-view-source.com/testnet/account/0x64ce437a3838c89d
 `0x64ce437a3838c89d` 换成自己的测试网地址
 
 
-
-# Cadence 合约部署示例
-
-
-- ts 
-
-Cadence 合约部署的一种方式, [详细内容](./ts/README.md)
-
-- js 
-
-Cadence 合约部署的一种方式，[详细内容](./js/README.md)
-
-- go
-
-Cadence 合约部署的一种方式，[详细内容](./go/README.md)
-
-
-
-
-
+ 
 
 # Flow 核心合约
 
